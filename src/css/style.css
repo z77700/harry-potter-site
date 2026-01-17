@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash:regular);
+@import url(https://fonts.googleapis.com/css?family=Henny+Penny:regular);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.paper{
+    --peper-padding: calc(30 / 1300 * 100cqw);
+    --max-font-size: 7.5cqw;
+
+    container-name: paper;
+    container-type: inline-size;
+
+    background-color: #E7E2DA;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    
+    
+    .paper-wrapper{
+        padding: var(--peper-padding);
+    }
+    
+    header>.top{
+        width: 100%;
+        aspect-ratio: 978/181;
+        background: url("../img/img/paper-head.PNG") center / contain no-repeat;
+    }
+    
+    header>.bottom{
+        width: 100%;
+        aspect-ratio: 942/93;
+        background: url("../img/img/paper-sub-head.PNG") center / contain no-repeat;
+    }
+    
+    main{
+        border: 3px solid black;
+        padding: calc(15 / 1300 * 100cqw);
+        overflow: hidden;
+    }
+
+    .first-article{
+        margin-bottom: 100px;
+        h1{
+
+            font-family: "Berkshire Swash", cursive;
+            font-size: var(--max-font-size);
+            text-align: center;
+            /* white-space: nowrap; */
+            padding-block: 50px;
+            text-shadow: 0px 10px 10px black;
+        }
+        hr{
+            padding-bottom: 10px;
+            border-left: none;
+            border-bottom: none;
+            border-right: none;
+        }
+        img{
+            float: right;
+            max-width: 100%;
+        }
+        p{
+            font-family: "Henny Penny", sans-serif;
+            line-height: 2;
+        }
+    }
+
+    .second-article{
+        h1{
+            font-family: "Berkshire Swash", cursive;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0px 10px 10px black;
+        }
+        p{
+            font-family: "Henny Penny", sans-serif;
+            line-height: 2;
+            float: left;
+            width: 30%;
+            margin: 1%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .paper{
+
+        & .second-article{
+            p{
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
